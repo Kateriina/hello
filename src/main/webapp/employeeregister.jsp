@@ -12,7 +12,8 @@
    <body>
    <div class="regform">
    <h1>Добавление пациента</h1>
-   <form action="<%= request.getContextPath() %>/register" method="post">
+  <--! form action="<%= request.getContextPath() %>/register" method="post"> -->
+    <form action="example.jsp" method="POST">
    <table style="with: 80%">
 
    <tr>
@@ -32,8 +33,8 @@
 
    <tr>
    <td class="info">Пол</td>
-   <td><input type="radio" name="gender"/>Жен
-   <input type="radio" name="gender"/>Муж</td>
+   <td><input type="radio" name="gender" value="female" checked/>Жен
+   <input type="radio" name="gender" value="male"/>Муж</td>
    </tr>
 
    <tr>
