@@ -52,7 +52,7 @@ public class IndexServlet {
             stmt = conn.createStatement();
 
             String sql = "INSERT INTO registry.patients (surname, name, second_name, birthdate, polis_num, route_sheet)"+
-                    " VALUES ( 'смирнова', 'елена', 'игоревна', '1997-06-04', '3487162387641264', 76432)";
+                    " VALUES ( 'петрова', 'елена', 'игоревна', '1997-06-04', '3097162387641264', 76432)";
             stmt.executeUpdate(sql);
             System.out.println("Inserted records into the table...");
 

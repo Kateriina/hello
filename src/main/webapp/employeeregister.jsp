@@ -1,5 +1,5 @@
- <%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 
+  <%@page pageEncoding="UTF-8" contentType="text/html; charset=UTF-8"%>
    <!DOCTYPE html>
    <html>
    <head>
@@ -12,8 +12,7 @@
    <body>
    <div class="regform">
    <h1>Добавление пациента</h1>
-  <--! form action="<%= request.getContextPath() %>/register" method="post"> -->
-    <form action="example.jsp" method="POST">
+    <form action="add.jsp" method="POST">
    <table style="with: 80%">
 
    <tr>
@@ -33,8 +32,8 @@
 
    <tr>
    <td class="info">Пол</td>
-   <td><input type="radio" name="gender" value="female" checked/>Жен
-   <input type="radio" name="gender" value="male"/>Муж</td>
+   <td><input type="radio" name="gender" value="Ж" checked/>F
+   <input type="radio" name="gender" value="М"/>M</td>
    </tr>
 
    <tr>
@@ -45,7 +44,7 @@
 
    <tr>
    <td>Номер полиса</td>
-   <td><input type="number" size="16" name="polisNum"  /></td>
+   <td><input type="text" size="16" name="polisNum"  /></td>
    </tr>
 
    <tr>
@@ -55,12 +54,12 @@
 
    <tr>
    <td>Серия паспорта</td>
-   <td><input type="number" size="4" minlength="4" name="passpSer" /></td>
+   <td><input type="text" size="4" minlength="4" name="passpSer" /></td>
    </tr>
 
    <tr>
    <td>Номер паспорта</td>
-   <td><input type="number" size="6"  minlength="6" name="passpNum" /></td>
+   <td><input type="text" size="6"  minlength="6" name="passpNum" /></td>
    </tr>
 
 
@@ -92,12 +91,12 @@
 
    <tr>
    <td>Корпус</td>
-   <td><input type="number" name="building" /></td>
+   <td><input type="text" name="building" /></td>
    </tr>
 
    <tr>
    <td>Квартира</td>
-   <td><input type="number" name="appartment" /></td>
+   <td><input type="number" name="apartment" /></td>
    </tr>
 
    <tr>

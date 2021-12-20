@@ -1,10 +1,10 @@
-    <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-             pageEncoding="ISO-8859-1"%>
+    <%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
             <!DOCTYPE html>
             <html>
             <head>
             <meta charset="UTF-8" />
-            <title>User Info</title>
+            <link rel="stylesheet" href = "style.css">
+            <title>Данные пациента</title>
             </head>
             <body>
             <p>Фамилия: <%= request.getParameter("surName") %></p>
@@ -16,25 +16,25 @@
 
 
 
-            <p>Дата рождения: <%= request.getParameter("surName") %></p>
-            <p>Номер полиса: <%= request.getParameter("firstName") %></p>
+            <p>Дата рождения: <%= request.getParameter("dateBirth") %></p>
+            <p>Номер полиса: <%= request.getParameter("polisNum") %></p>
 
             <p>Паспорт</p>
-            <p>Серия паспорта: <%= request.getParameter("lastName") %></p>
-            <p>Номер паспорта: <%= request.getParameter("lastName") %></p>
+            <p>Серия паспорта: <%= request.getParameter("passpSer") %></p>
+            <p>Номер паспорта: <%= request.getParameter("passpNum") %></p>
 
             <p>Адрес</p>
-            <p>Страна: <%= request.getParameter("lastName") %></p>
-            <p>Город: <%= request.getParameter("lastName") %></p>
-            <p>Улица: <%= request.getParameter("lastName") %></p>
-            <p>Дом: <%= request.getParameter("lastName") %></p>
-            <p>Корпус: <%= request.getParameter("lastName") %></p>
-            <p>Квартира: <%= request.getParameter("lastName") %></p>
+            <p>Страна: <%= request.getParameter("country") %></p>
+            <p>Город: <%= request.getParameter("city") %></p>
+            <p>Улица: <%= request.getParameter("street") %></p>
+            <p>Дом: <%= request.getParameter("house_num") %></p>
+            <p>Корпус: <%= request.getParameter("building") %></p>
+            <p>Квартира: <%= request.getParameter("appartment") %></p>
 
 
             <p>Контакты</p>
-            <p>Телефон: <%= request.getParameter("lastName") %></p>
-            <p>Электронная почта: <%= request.getParameter("lastName") %></p>
+            <p>Телефон: <%= request.getParameter("contact") %></p>
+            <p>Электронная почта: <%= request.getParameter("email") %></p>
 
             </ul>
             </body>
