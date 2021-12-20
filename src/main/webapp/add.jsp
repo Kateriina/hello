@@ -37,6 +37,7 @@
 
 
         try{
+
          Class.forName("com.mysql.cj.jdbc.Driver");
            Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/registry", "root", "root");
            Statement st=con.createStatement();
