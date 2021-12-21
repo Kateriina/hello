@@ -34,11 +34,10 @@ ResultSet resultSet = null;
         <tr>
 
         </tr>
-        <tr bgcolor="#5c16fa">
+        <tr bgcolor="#6ec5fa">
         <td><b>id</b></td>
         <td><b>Фамилия</b></td>
         <td><b>Имя</b></td>
-        <td><b>Отчество</b></td><td><b>Фамилия</b></td>
          <td><b>Пол</b></td>
         </tr>
             <%
@@ -50,7 +49,7 @@ String sql ="SELECT * FROM patients";
 resultSet = statement.executeQuery(sql);
 while(resultSet.next()){
 %>
-        <tr bgcolor="#DEB887">
+        <tr bgcolor="#c7d3fa">
 
         <td><%=resultSet.getString("id") %></td>
         <td><%=resultSet.getString("surname") %></td>
