@@ -32,8 +32,8 @@
 
    <tr>
    <td class="info">Пол</td>
-   <td><input type="radio" name="gender" value="Ж" checked/>F
-   <input type="radio" name="gender" value="М"/>M</td>
+   <td><input type="radio" name="gender" value="Ж" checked/>Жен
+   <input type="radio" name="gender" value="М"/>Муж</td>
    </tr>
 
    <tr>
@@ -47,19 +47,10 @@
    <td><input type="text" size="16" name="polisNum"  /></td>
    </tr>
 
-   <tr>
-   <td class="info">Паспорт
-   </td>
-   </tr>
-
-   <tr>
-   <td>Серия паспорта</td>
-   <td><input type="text" size="4" minlength="4" name="passpSer" /></td>
-   </tr>
 
    <tr>
    <td>Номер паспорта</td>
-   <td><input type="text" size="6"  minlength="6" name="passpNum" /></td>
+   <td><input type="text" size="10"  minlength="10" name="pasportNum" /></td>
    </tr>
 
 
