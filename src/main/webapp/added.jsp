@@ -6,6 +6,8 @@
         <head>
         <meta charset="UTF-8" />
         <link rel="stylesheet" href = "style.css">
+        <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Montserrat:wght@100;400;600&family=Open+Sans:wght@700&display=swap" rel="stylesheet">
+
         <body>
         <title>Данные</title>
         <div class="content">
@@ -13,7 +15,12 @@
         <h1 align="center">Данные добавлены</h1>
 
             <form action="view.jsp" method="POST">
-            <input type="submit" value="Постмотреть" />
+            <input type="submit" value="Посмотреть" />
+            </form>
+
+            <form action="${pageContext.request.contextPath}/hello-servlet">
+            <button type="button" name="button" value="button1">Посмотреть пациентов</button>
+            <button type="button" name="button" value="button2">Добавить пациента</button>
             </form>
             <%
 
@@ -35,14 +42,14 @@
             int house_num = Integer.parseInt(request.getParameter("house_num"));
             String building = request.getParameter("building");
             int apartment = Integer.parseInt(request.getParameter("apartment"));
-
+            String cabs = request.getParameter("routesheet");
 
         try{
 
          Class.forName("com.mysql.cj.jdbc.Driver");
            Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/patients", "root", "root");
            Statement st=con.createStatement();
-           int i=st.executeUpdate("insert into patients.patients(surname, name, second_name, gender, birthdate, polis_num, pasport_num, country, city, street, house_num, building, apartment) VALUES(  '"+surName+"', '"+firstName+"', '"+lastName+"', '"+gender+"', '"+dateBirth+"','"+polisNum+"', '"+pasportNum+"', '"+country+"', '"+city+"', '"+street+"', '"+house_num+"','"+building+"','"+apartment+"')");
+           int i=st.executeUpdate("insert into patients.patients(surname, name, second_name, gender, birthdate, polis_num, pasport_num, country, city, street, house_num, building, apartment, routesheet) VALUES(  '"+surName+"', '"+firstName+"', '"+lastName+"', '"+gender+"', '"+dateBirth+"','"+polisNum+"', '"+pasportNum+"', '"+country+"', '"+city+"', '"+street+"', '"+house_num+"','"+building+"','"+apartment+"', '"+cabs+"')");
 
                 System.out.println("Data is successfully inserted!");
         }

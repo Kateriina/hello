@@ -9,7 +9,61 @@
             <html>
             <head>
             <meta charset="UTF-8" />
+            <script src="filter.js" type="text/javascript"></script>
             <link rel="stylesheet" href = "style.css">
+            <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Montserrat:wght@100;400;600&family=Open+Sans:wght@700&display=swap" rel="stylesheet">
+
+            <style>
+                th{
+                    /*background-color: #6ec5fa;*/
+                    font-size: 150%;
+                    font-family: 'Montserrat', sans-serif;
+                    padding: 3px 8px;
+                    text-align: center;
+                    border-radius: 10px;
+                    background-color: #a5baff;
+                    border: 1px solid gray;
+                }
+                a{
+                    color: black;
+                    display: inline-block;
+                    vertical-align: top;
+                    margin: 0 10px;
+                    position: relative;
+                    transition: color .1s linear;
+                    font-family: 'Montserrat', sans-serif;
+                }
+                a:hover{
+                    color: #f0feed;
+                }
+                h2{
+                    font-size:300%;
+                    font-family: 'Montserrat', sans-serif;
+                    font-weight: bold;
+                    margin-bottom: 0%;
+                }
+                .buttn{
+                    display: inline-block;
+                    padding: 3px 8px;
+                    margin-left: 2%;
+                    vertical-align: top;
+                    color: black;
+                    font-size: 16px;
+                    text-decoration: none;
+                    background-color: #c7d3fa;
+                    border-radius: 10px;
+                    border: 1px solid gray;
+                    font-size: 100%;
+                    text-align: center;
+                }
+
+                .buttn:hover{
+                    background-color: #a5baff;
+                    color: black;
+                }
+
+            </style>
+
             </head>
             <body>
             <%
@@ -29,27 +83,31 @@ Connection connection = null;
 Statement statement = null;
 ResultSet resultSet = null;
 %>
-        <h2 align="center"><font><strong>Данные пациентов</strong></font></h2>
-        <table align="center" cellpadding="2" cellspacing="0" border="1">
+            <h2 align="center">Данные пациентов</h2>
+            <a class = "buttn" href="addingData.jsp">Добавить</a>
+        <table align="center" cellpadding="2" cellspacing="0" border="0" style="font-family:Montserrat" >
         <tr>
 
         </tr>
-        <tr bgcolor="#6ec5fa">
-        <td><b>id</b></td>
-        <td><b>Фамилия</b></td>
-        <td><b>Имя</b></td>
-        <td><b>Отчество</b></td>
-        <td><b>Пол</b></td>
-        <td><b>Дата рождения</b></td>
-        <td><b>Номер полиса</b></td>
-        <td><b>Номер паспорта</b></td>
-        <td><b>Страна</b></td>
-        <td><b>Город</b></td>
-        <td><b>Улица</b></td>
-        <td><b>Дом</b></td>
-        <td><b>Корпус</b></td>
-        <td><b>Квартира</b></td>
-        <td><b>Кабинеты</b></td>
+        <tr>
+        <th><b>id</b></th>
+        <th><b>Фамилия</b></th>
+        <th><b>Имя</b></th>
+        <th><b>Отчество</b></th>
+        <th><b>Пол</b></th>
+        <th><b>Дата рождения</b></th>
+        <th><b>Номер полиса</b></th>
+        <th><b>Номер паспорта</b></th>
+        <th><b>Страна</b></th>
+        <th><b>Город</b></th>
+        <th><b>Улица</b></th>
+        <th><b>Дом</b></th>
+        <th><b>Корпус</b></th>
+        <th><b>Квартира</b></th>
+        <th><b>Кабинеты</b></th>
+        <th><b>Изменение</b></th>
+        <th><b>Удаление</b></th>
+        <th><b>Печать</b></th>
         </tr>
             <%
                 try{
@@ -58,9 +116,10 @@ ResultSet resultSet = null;
                 String sql ="SELECT * FROM patients";
 
                 resultSet = statement.executeQuery(sql);
+                int n = 0;
                 while(resultSet.next()){
             %>
-        <tr bgcolor="#c7d3fa">
+        <tr>
 
         <td><%=resultSet.getString("id") %></td>
         <td><%=resultSet.getString("surname") %></td>
@@ -78,15 +137,19 @@ ResultSet resultSet = null;
         <td><%=resultSet.getString("apartment") %></td>
         <td><%=resultSet.getString("routesheet") %></td>
 
+        <td><a href="edit.jsp">Изменить</a></td>
+        <td><a href="delete.jsp">Удалить</a></td>
         </tr>
 
             <%
-}
+                n++;
+                }
 
-} catch (Exception e) {
-e.printStackTrace();
-}
-%>
+                } catch (Exception e) {
+                e.printStackTrace();
+                }
+
+            %>
         </table>
             </body>
             </html>

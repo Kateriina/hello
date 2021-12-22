@@ -2,6 +2,7 @@ body{
    background: url("./med.jpg");
    background-size: cover;
    background-repeat:no-repeat;
+	font-family: 'Montserrat', sans-serif;
 }
   
 .regform{
@@ -16,15 +17,27 @@ h1{
 font-size:200%;
 font-family: 'Montserrat', sans-serif;
 }
+h2{
+	font-size: 300%;
+	font-family: 'Montserrat', sans-serif;
+}
 table{
-	height: 70%;
+	font-size: 60%;
+	font-family: 'Montserrat', sans-serif;
+	margin-top: 1%;
+	border-radius: 10px;
 }
   
 td {
-  font-size:150%;
-  font-family: 'Montserrat', sans-serif;
-
+	font-size: 150%;
+	font-family: 'Montserrat', sans-serif;
+	padding: 3px 8px;
+	text-align: center;
+	background-color: #c7d3fa;
+	border-radius: 10px;
+	border: 1px solid gray;
 }
+
 input[type=text]{
    width: 150%;
    font-family: 'Montserrat', sans-serif;
@@ -63,24 +76,31 @@ input[type='num'] {
 	font-size:20px;
 }
 
+p{
+	font-family: 'Montserrat', sans-serif;
+	font-size:200%;
+}
+a{
+	color: #f0feed;
+	display: inline-block;
+	vertical-align: top;
+	margin: 0 10px;
+	position: relative;
+	text-decoration: none;
+	transition: color .2s linear;
+}
+
+a:hover{
+	color: #091732;
+}
+
 .info{
-   font-family: 'Montserrat', sans-serif;
-   font-size:200%;
+	font-family: 'Montserrat', sans-serif;
+	font-size:200%;
 }
 
 .info{
 	text-align: center;
 	padding: 1px 2px;
 	border: 1px;
-}
-.trhead{
-	background-color: #6ec5fa;
-}
-.trbody{
-	background-color: #c7d3fa;
-}
-
-p{
-	font-family: 'Montserrat', sans-serif;
-	font-size:200%;
 }

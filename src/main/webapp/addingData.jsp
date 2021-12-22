@@ -7,12 +7,12 @@
    <link rel="stylesheet" href = "style.css">
    <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Montserrat:wght@100;400;600&family=Open+Sans:wght@700&display=swap" rel="stylesheet">
 
-   <title>Registry</title>
+   <title>Добавление</title>
    </head>
    <body>
    <div class="regform">
    <h1>Добавление пациента</h1>
-    <form action="add.jsp" method="POST">
+    <form action="added.jsp" method="POST">
    <table style="with: 80%">
 
    <tr>
@@ -103,6 +103,11 @@
    <tr>
    <td>Электронная почта</td>
    <td><input type="email" name="email" /></td>
+   </tr>
+
+   <tr>
+   <td>Кабинеты</td>
+   <td><input type="text" name="cabs" /></td>
    </tr>
 
    </table>
