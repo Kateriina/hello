@@ -12,22 +12,13 @@ body{
 	padding-top:5%;
 	padding-left:5%;
 }
-
-h1{
-font-size:200%;
-font-family: 'Montserrat', sans-serif;
-}
-h2{
-	font-size: 300%;
-	font-family: 'Montserrat', sans-serif;
-}
 table{
 	font-size: 60%;
 	font-family: 'Montserrat', sans-serif;
 	margin-top: 1%;
 	border-radius: 10px;
 }
-  
+
 td {
 	font-size: 150%;
 	font-family: 'Montserrat', sans-serif;
@@ -36,6 +27,14 @@ td {
 	background-color: #c7d3fa;
 	border-radius: 10px;
 	border: 1px solid gray;
+}
+h1{
+font-size:200%;
+font-family: 'Montserrat', sans-serif;
+}
+h2{
+	font-size: 300%;
+	font-family: 'Montserrat', sans-serif;
 }
 
 input[type=text]{

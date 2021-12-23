@@ -8,9 +8,22 @@
         <html>
         <head>
         <meta charset="UTF-8">
-        <link rel="stylesheet" href = "style.css">
+
         <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Montserrat:wght@100;400;600&family=Open+Sans:wght@700&display=swap" rel="stylesheet">
-        <title>Edit</title>
+                <style>
+                .info{
+                font-family: 'Montserrat', sans-serif;
+                font-size:200%;
+                }
+                body{
+                background: url("./med.jpg");
+                background-size: cover;
+                background-repeat:no-repeat;
+                font-family: 'Montserrat', sans-serif;
+                }
+                </style>
+
+                <title>Edit</title>
         </head>
         <body>
                         <%
@@ -146,7 +159,7 @@
 
         <tr>
         <td>Кабинеты</td>
-        <td><input type="text" name="cabs"/> value = "<%=resultSet.getString("routesheet") %>"</td>
+        <td><input type="text" name="cabs" value = "<%=resultSet.getString("routesheet") %>"/></td>
         </tr>
 
 

@@ -100,6 +100,7 @@ ResultSet resultSet = null;
         <th><b>Номер паспорта</b></th>
         <th><b>Страна</b></th>
         <th><b>Город</b></th>
+        <th><b>Район</b></th>
         <th><b>Улица</b></th>
         <th><b>Дом</b></th>
         <th><b>Корпус</b></th>
@@ -118,35 +119,34 @@ ResultSet resultSet = null;
                 String sql ="SELECT * FROM patients";
 
                 resultSet = statement.executeQuery(sql);
-                int n = 0;
                 while(resultSet.next()){
             %>
         <tr>
 
         <td><%=resultSet.getString("id") %></td>
-        <td><%=resultSet.getString("surname") %></td>
-        <td><%=resultSet.getString("name") %></td>
-        <td><%=resultSet.getString("second_name") %></td>
-        <td><%=resultSet.getString("gender") %></td>
-        <td><%=resultSet.getString("birthdate") %></td>
-        <td><%=resultSet.getString("polis_num") %></td>
-        <td><%=resultSet.getString("pasport_num") %></td>
-        <td><%=resultSet.getString("country") %></td>
-        <td><%=resultSet.getString("city") %></td>
-        <td><%=resultSet.getString("street") %></td>
-        <td><%=resultSet.getString("house_num") %></td>
-        <td><%=resultSet.getString("building") %></td>
-        <td><%=resultSet.getString("apartment") %></td>
-        <td><%=resultSet.getString("contact") %></td>
-        <td><%=resultSet.getString("email") %></td>
-        <td><%=resultSet.getString("routesheet") %></td>
+        <td><a href="action.jsp?str=surname&val=<%=resultSet.getString("surname") %>"><%=resultSet.getString("surname") %></a></td>
+        <td><a href="action.jsp?str=name&val=<%=resultSet.getString("name") %>"><%=resultSet.getString("name") %></a></td>
+        <td><a href="action.jsp?str=second_name&val=<%=resultSet.getString("second_name") %>"><%=resultSet.getString("second_name") %></a></td>
+        <td><a href="action.jsp?str=gender&val=<%=resultSet.getString("gender") %>"><%=resultSet.getString("gender") %></a></td>
+        <td><a href="action.jsp?str=birthdate&val=<%=resultSet.getString("birthdate") %>"><%=resultSet.getString("birthdate") %></a></td>
+        <td><a href="action.jsp?str=polis_num&val=<%=resultSet.getString("polis_num") %>"><%=resultSet.getString("polis_num") %></a></td>
+        <td><a href="action.jsp?str=pasport_num&val=<%=resultSet.getString("pasport_num") %>"><%=resultSet.getString("pasport_num") %></a></td>
+        <td><a href="action.jsp?str=country&val=<%=resultSet.getString("country") %>"><%=resultSet.getString("country") %></a></td>
+        <td><a href="action.jsp?str=city&val=<%=resultSet.getString("city") %>"><%=resultSet.getString("city") %></a></td>
+        <td><a href="action.jsp?str=district&val=<%=resultSet.getString("district") %>"><%=resultSet.getString("district") %></a></td>
+        <td><a href="action.jsp?str=street&val=<%=resultSet.getString("street") %>"><%=resultSet.getString("street") %></a></td>
+        <td><a href="action.jsp?str=house_num&val=<%=resultSet.getString("house_num") %>"><%=resultSet.getString("house_num") %></a></td>
+        <td><a href="action.jsp?str=building&val=<%=resultSet.getString("building") %>"><%=resultSet.getString("building") %></a></td>
+        <td><a href="action.jsp?str=apartment&val=<%=resultSet.getString("apartment") %>"><%=resultSet.getString("apartment") %></a></td>
+        <td><a href="action.jsp?str=contact&val=<%=resultSet.getString("contact") %>"><%=resultSet.getString("contact") %></a></td>
+        <td><a href="action.jsp?str=email&val=<%=resultSet.getString("email") %>"><%=resultSet.getString("email") %></a></td>
+        <td><a href="action.jsp?str=routesheet&val=<%=resultSet.getString("routesheet") %>"><%=resultSet.getString("routesheet") %></a></td>
 
         <td><a href="edit.jsp?id=<%=resultSet.getInt("id") %>">Изменить</a></td>
         <td><a href="jspDelete.jsp?id=<%=resultSet.getInt("id") %>">Удалить</a></td>
         </tr>
 
             <%
-                n++;
                 }
 
                 } catch (Exception e) {
