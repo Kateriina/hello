@@ -104,6 +104,11 @@
         </tr>
 
         <tr>
+        <td>Район</td>
+        <td><input type="text" name="district" value = "<%=resultSet.getString("district") %>" /></td>
+        </tr>
+
+        <tr>
         <td>Улица</td>
         <td><input type="text" name="street" value = "<%=resultSet.getString("street") %>"/></td>
         </tr>

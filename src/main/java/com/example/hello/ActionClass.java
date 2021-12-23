@@ -1,4 +1,6 @@
 package com.example.hello;
+
+import java.sql.SQLException;
 /*
 public class ActionClass {
     public void  deletePage(PageData delete) {
@@ -14,4 +16,6 @@ public class ActionClass {
             e.printStackTrace();
         }
     }
-}*/
+
+}
+*/
