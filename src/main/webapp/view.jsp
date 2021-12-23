@@ -104,6 +104,8 @@ ResultSet resultSet = null;
         <th><b>Дом</b></th>
         <th><b>Корпус</b></th>
         <th><b>Квартира</b></th>
+        <th><b>Телефон</b></th>
+        <th><b>Эл. почта</b></th>
         <th><b>Кабинеты</b></th>
         <th><b>Изменение</b></th>
         <th><b>Удаление</b></th>
@@ -135,10 +137,12 @@ ResultSet resultSet = null;
         <td><%=resultSet.getString("house_num") %></td>
         <td><%=resultSet.getString("building") %></td>
         <td><%=resultSet.getString("apartment") %></td>
+        <td><%=resultSet.getString("contact") %></td>
+        <td><%=resultSet.getString("email") %></td>
         <td><%=resultSet.getString("routesheet") %></td>
 
-        <td><a href="edit.jsp">Изменить</a></td>
-        <td><a href="delete.jsp">Удалить</a></td>
+        <td><a href="edit.jsp?id=<%=resultSet.getInt("id") %>">Изменить</a></td>
+        <td><a href="jspDelete.jsp?id=<%=resultSet.getInt("id") %>">Удалить</a></td>
         </tr>
 
             <%

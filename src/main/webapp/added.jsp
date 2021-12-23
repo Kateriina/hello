@@ -42,6 +42,8 @@
             int house_num = Integer.parseInt(request.getParameter("house_num"));
             String building = request.getParameter("building");
             int apartment = Integer.parseInt(request.getParameter("apartment"));
+            String contact = request.getParameter("contact");
+            String email = request.getParameter("email");
             String cabs = request.getParameter("routesheet");
 
         try{
@@ -49,9 +51,9 @@
          Class.forName("com.mysql.cj.jdbc.Driver");
            Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/patients", "root", "root");
            Statement st=con.createStatement();
-           int i=st.executeUpdate("insert into patients.patients(surname, name, second_name, gender, birthdate, polis_num, pasport_num, country, city, street, house_num, building, apartment, routesheet) VALUES(  '"+surName+"', '"+firstName+"', '"+lastName+"', '"+gender+"', '"+dateBirth+"','"+polisNum+"', '"+pasportNum+"', '"+country+"', '"+city+"', '"+street+"', '"+house_num+"','"+building+"','"+apartment+"', '"+cabs+"')");
+           int i=st.executeUpdate("insert into patients.patients(surname, name, second_name, gender, birthdate, polis_num, pasport_num, country, city, street, house_num, building, apartment, contact, email, routesheet) VALUES(  '"+surName+"', '"+firstName+"', '"+lastName+"', '"+gender+"', '"+dateBirth+"','"+polisNum+"', '"+pasportNum+"', '"+country+"', '"+city+"', '"+street+"', '"+house_num+"','"+building+"','"+apartment+"', '"+contact+"', '"+email+"', '"+cabs+"')");
 
-                System.out.println("Data is successfully inserted!");
+            System.out.println("Data is successfully inserted!");
         }
         catch(Exception e)
         {

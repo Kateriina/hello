@@ -12,8 +12,11 @@
 
                 <div class="regform">
                 <h1>Изменение данных</h1>
-                <form action="edited.jsp" method="POST">
-                <input type="hidden" value="${patients.id}" name="id" />
+            <%
+             String idd = request.getParameter("id");
+                System.out.println("idd = " + idd);
+            %>
+                <form action="edited.jsp?id=<%=idd%>" method="POST">
                 <table style="with: 80%">
 
                 <tr>
