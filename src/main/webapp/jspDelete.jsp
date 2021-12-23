@@ -20,8 +20,6 @@
             </form>
             <%
                 String id = request.getParameter("id");
-                id = id.substring(0, id.length() - 1);
-
 
                 try
                 {

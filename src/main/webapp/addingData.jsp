@@ -70,6 +70,11 @@
    </tr>
 
    <tr>
+   <td>Район</td>
+   <td><input type="text" name="district" /></td>
+   </tr>
+
+   <tr>
    <td>Улица</td>
    <td><input type="text" name="street" /></td>
    </tr>
