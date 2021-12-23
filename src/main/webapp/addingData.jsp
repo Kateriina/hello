@@ -5,18 +5,8 @@
    <head>
    <meta charset="UTF-8">
    <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Montserrat:wght@100;400;600&family=Open+Sans:wght@700&display=swap" rel="stylesheet">
-   <style>
-      .info{
-      font-family: 'Montserrat', sans-serif;
-      font-size:200%;
-      }
-      body{
-      background: url("./med.jpg");
-      background-size: cover;
-      background-repeat:no-repeat;
-      font-family: 'Montserrat', sans-serif;
-      }
-   </style>
+   <link rel="stylesheet" href = "style.css">
+   <style>td{ font-size: 130%; }</style>
    <title>Добавление</title>
    </head>
    <body>
@@ -24,30 +14,33 @@
    <h1>Добавление пациента</h1>
     <form action="added.jsp" method="POST">
    <table style="with: 80%">
-
    <tr>
-   <td class="info">Фамилия</td>
+   <td class="info">Данные
+   </td>
+   </tr>
+   <tr>
+   <td>Фамилия</td>
    <td><input type="text" name="surName" /></td>
    </tr>
 
    <tr>
-   <td class="info">Имя</td>
+   <td>Имя</td>
    <td><input type="text" name="firstName" /></td>
    </tr>
 
    <tr>
-   <td class="info">Отчество</td>
+   <td>Отчество</td>
    <td><input type="text" name="lastName" /></td>
    </tr>
 
    <tr>
-   <td class="info">Пол</td>
+   <td>Пол</td>
    <td><input type="radio" name="gender" value="Ж" checked/>Жен
    <input type="radio" name="gender" value="М"/>Муж</td>
    </tr>
 
    <tr>
-   <td class="info">Дата рождения</td>
+   <td>Дата рождения</td>
    <td><input type="date" name="dateBirth" max="2021-12-20"/></td>
    </tr>
 

@@ -12,22 +12,7 @@ body{
 	padding-top:5%;
 	padding-left:5%;
 }
-table{
-	font-size: 60%;
-	font-family: 'Montserrat', sans-serif;
-	margin-top: 1%;
-	border-radius: 10px;
-}
 
-td {
-	font-size: 150%;
-	font-family: 'Montserrat', sans-serif;
-	padding: 3px 8px;
-	text-align: center;
-	background-color: #c7d3fa;
-	border-radius: 10px;
-	border: 1px solid gray;
-}
 h1{
 font-size:200%;
 font-family: 'Montserrat', sans-serif;

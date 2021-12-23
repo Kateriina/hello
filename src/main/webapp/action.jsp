@@ -10,12 +10,39 @@
                 <head>
                 <meta charset="UTF-8" />
                 <script src="filter.js" type="text/javascript"></script>
-                <link rel="stylesheet" href = "style.css">
                 <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Montserrat:wght@100;400;600&family=Open+Sans:wght@700&display=swap" rel="stylesheet">
 
                 <style>
+                    table{
+                    font-size: 60%;
+                    font-family: 'Montserrat', sans-serif;
+                    margin-top: 1%;
+                    border-radius: 10px;
+                    }
 
-
+                    td {
+                    font-size: 150%;
+                    font-family: 'Montserrat', sans-serif;
+                    padding: 3px 8px;
+                    text-align: center;
+                    background-color: #c7d3fa;
+                    border-radius: 10px;
+                    border: 1px solid gray;
+                    }
+                    h1{
+                    font-size:200%;
+                    font-family: 'Montserrat', sans-serif;
+                    }
+                    body{
+                    background: url("./med.jpg");
+                    background-size: cover;
+                    background-repeat:no-repeat;
+                    font-family: 'Montserrat', sans-serif;
+                    }
+                    h2{
+                    font-size: 300%;
+                    font-family: 'Montserrat', sans-serif;
+                    }
                 th{
                 /*background-color: #6ec5fa;*/
                 font-size: 150%;

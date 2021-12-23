@@ -10,20 +10,9 @@
         <meta charset="UTF-8">
 
         <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Montserrat:wght@100;400;600&family=Open+Sans:wght@700&display=swap" rel="stylesheet">
-                <style>
-                .info{
-                font-family: 'Montserrat', sans-serif;
-                font-size:200%;
-                }
-                body{
-                background: url("./med.jpg");
-                background-size: cover;
-                background-repeat:no-repeat;
-                font-family: 'Montserrat', sans-serif;
-                }
-                </style>
-
-                <title>Edit</title>
+        <link rel="stylesheet" href = "style.css">
+        <style>td{ font-size: 130%; }</style>
+        <title>Edit</title>
         </head>
         <body>
                         <%
@@ -62,24 +51,27 @@
 
         <form action="edited.jsp?id=<%=idd%>" method="POST">
         <table style="with: 80%">
-
         <tr>
-        <td class="info">Фамилия</td>
+        <td class="info">Данные
+        </td>
+        </tr>
+        <tr>
+        <td>Фамилия</td>
         <td><input type="text" name="surName" value = "<%=resultSet.getString("surName") %>" /></td>
         </tr>
 
         <tr>
-        <td class="info">Имя</td>
+        <td>Имя</td>
         <td><input type="text" name="firstName" value = "<%=resultSet.getString("name") %>"/></td>
         </tr>
 
         <tr>
-        <td class="info">Отчество</td>
+        <td>Отчество</td>
         <td><input type="text" name="lastName" value = "<%=resultSet.getString("second_name") %>"/></td>
         </tr>
 
         <tr>
-        <td class="info">Пол</td>
+        <td>Пол</td>
         </tr>
 
 
