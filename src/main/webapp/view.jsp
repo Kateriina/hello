@@ -28,6 +28,7 @@
                 background-color: #c7d3fa;
                 border-radius: 10px;
                 border: 1px solid gray;
+                font-family: 'Montserrat', sans-serif;
                 }
                 h1{
                 font-size:200%;
@@ -38,6 +39,8 @@
                 background-size: cover;
                 background-repeat:no-repeat;
                 font-family: 'Montserrat', sans-serif;
+                scrollbar-color: #ccd6f8 #c4d3f885;
+                scrollbar-width: thin;
                 }
                 h2{
                 font-size: 300%;
@@ -61,6 +64,7 @@
                     position: relative;
                     transition: color .1s linear;
                     font-family: 'Montserrat', sans-serif;
+                    text-decoration: none;
                 }
                 a:hover{
                     color: #f0feed;
@@ -91,6 +95,16 @@
                     color: black;
                 }
 
+                .container {
+                    width: 95%;
+                    overflow: auto;
+                    overflow-x: auto;
+                    overflow-y: auto;
+                    text-align: center;
+                    margin: auto;
+                    padding-bottom: 1%;
+                }
+
             </style>
 
             </head>
@@ -114,8 +128,8 @@ ResultSet resultSet = null;
 %>
             <h2 align="center">Данные пациентов</h2>
             <a class = "buttn" href="addingData.jsp">Добавить</a>
+        <div class="container">
         <table align="center" cellpadding="2" cellspacing="0" border="0" style="font-family:Montserrat" >
-
         <tr>
 
         </tr>
@@ -184,6 +198,8 @@ ResultSet resultSet = null;
                 }
 
             %>
+
         </table>
+        </div>
             </body>
             </html>

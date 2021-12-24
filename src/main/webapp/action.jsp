@@ -38,6 +38,17 @@
                     background-size: cover;
                     background-repeat:no-repeat;
                     font-family: 'Montserrat', sans-serif;
+                    scrollbar-color: #ccd6f8 #c4d3f885;
+                    scrollbar-width: thin;
+                    }
+                    .container {
+                    width: 95%;
+                    overflow: auto;
+                    overflow-x: auto;
+                    overflow-y: auto;
+                    text-align: center;
+                    margin: auto;
+                    padding-bottom: 1%;
                     }
                     h2{
                     font-size: 300%;
@@ -114,6 +125,7 @@ ResultSet resultSet = null;
 %>
                 <h2 align="center">Данные пациентов</h2>
                 <a class = "buttn" href="addingData.jsp">Добавить</a>
+                <div class="container">
                 <table align="center" cellpadding="2" cellspacing="0" border="0" style="font-family:Montserrat" >
                 <tr>
 
@@ -186,5 +198,6 @@ ResultSet resultSet = null;
 
             %>
                 </table>
+                </div>
                 </body>
                 </html>

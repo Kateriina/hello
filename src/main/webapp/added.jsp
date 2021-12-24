@@ -59,8 +59,9 @@
         }
         catch(Exception e)
         {
-        System.out.print(e);
-        e.printStackTrace();
+                System.out.print(e);
+                response.sendRedirect("error.jsp");
+				return;
 
         }
 

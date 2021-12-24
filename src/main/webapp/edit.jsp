@@ -163,7 +163,7 @@
                 } %>
 
         </table>
-                <input type="submit" value="Edit" />
+                <input type="submit" value="Изменить" />
         </form>
         </div>
         </body>
