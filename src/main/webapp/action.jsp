@@ -72,6 +72,7 @@
                 position: relative;
                 transition: color .1s linear;
                 font-family: 'Montserrat', sans-serif;
+                text-decoration: none;
                 }
                 a:hover{
                 color: #f0feed;
@@ -166,7 +167,7 @@ ResultSet resultSet = null;
             %>
                 <tr>
 
-                <td><%=resultSet.getString("id") %></td>
+                <td><a href="view.jsp"><%=resultSet.getString("id") %></a></td>
                 <td><a href="view.jsp"><%=resultSet.getString("surname") %></a></td>
                 <td><a href="view.jsp"><%=resultSet.getString("name") %></a></td>
                 <td><a href="view.jsp"><%=resultSet.getString("second_name") %></a></td>
@@ -186,8 +187,11 @@ ResultSet resultSet = null;
                 <td><a href="view.jsp"><%=resultSet.getString("routesheet") %></a></td>
 
                 <td><a href="edit.jsp?id=<%=resultSet.getInt("id") %>">Изменить</a></td>
-                <td><a href="jspDelete.jsp?id=<%=resultSet.getInt("id") %>">Удалить</a></td>
-                </tr>
+
+                <td><a href="delete.jsp?id=<%=resultSet.getInt("id")%>">Удалить</a></td>
+                <td><a href="downl.jsp?id=<%=resultSet.getInt("id") %>">Талон</a></td>
+
+            </tr>
 
                         <%
                 }

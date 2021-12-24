@@ -5,8 +5,9 @@
         <%@ page language="java" contentType="text/html; charset=UTF-8"
                  pageEncoding="UTF-8"%>
         <%@page import="java.sql.*,java.util.*"%>
-        <!DOCTYPE html>
-            <html>
+        <?xml version="1.0" encoding="UTF-8"?>
+        <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+        <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fi">
             <head>
             <meta charset="UTF-8" />
             <script src="filter.js" type="text/javascript"></script>
@@ -167,7 +168,7 @@ ResultSet resultSet = null;
             %>
         <tr>
 
-        <td><%=resultSet.getString("id") %></td>
+        <td><a href="action.jsp?str=id&val=<%=resultSet.getString("id") %>"><%=resultSet.getString("id") %></a></td>
         <td><a href="action.jsp?str=surname&val=<%=resultSet.getString("surname") %>"><%=resultSet.getString("surname") %></a></td>
         <td><a href="action.jsp?str=name&val=<%=resultSet.getString("name") %>"><%=resultSet.getString("name") %></a></td>
         <td><a href="action.jsp?str=second_name&val=<%=resultSet.getString("second_name") %>"><%=resultSet.getString("second_name") %></a></td>
@@ -187,7 +188,7 @@ ResultSet resultSet = null;
         <td><a href="action.jsp?str=routesheet&val=<%=resultSet.getString("routesheet") %>"><%=resultSet.getString("routesheet") %></a></td>
 
         <td><a href="edit.jsp?id=<%=resultSet.getInt("id") %>">Изменить</a></td>
-        <td><a href="jspDelete.jsp?id=<%=resultSet.getInt("id") %>">Удалить</a></td>
+        <td><a href="delete.jsp?id=<%=resultSet.getInt("id")%>">Удалить</a></td>
         <td><a href="downl.jsp?id=<%=resultSet.getInt("id") %>">Талон</a></td>
         </tr>
 

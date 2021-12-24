@@ -6,38 +6,59 @@
         <meta charset="UTF-8" />
         <link rel="stylesheet" href = "style.css">
         <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Montserrat:wght@100;400;600&family=Open+Sans:wght@700&display=swap" rel="stylesheet">
+        <style>
+          a{
+          color: #f0feed;
+          display: inline-block;
+          vertical-align: top;
+          margin: 0 10px;
+          position: relative;
+          text-decoration: none;
+          transition: color .2s linear;
+          font-size: 300%;
+          font-family: 'Montserrat', sans-serif;
+          }
 
-        <body>
-        <title>Статталон</title>
+          a:hover{
+          color: black;
+          }
+          h1{
+          font-size:300%;
+          margin-left:10px;
+          }
+          </style>
 
-        <h1 align="center">Статистический талон готов</h1>
+        <title>Талон</title>
+          <body style="margin-left:5%">
+        <h1>Статистический талон готов!</h1>
+        <%String addr = "C:/ProgramData/MySQL/MySQL Server 8.0/Uploads/order102.docx";%>
+       <a  href = "C:/ProgramData/MySQL/MySQL Server 8.0/Uploads/order102.doc">Скачать</a>
+          <br><a  href="index.jsp">Главное меню</a>
 
-        <form action="index.jsp" method="POST">
-        <input type="submit" value="Главное меню" />
-        </form>
             <%
                 String id = request.getParameter("id");
 
+                String driverName = "com.mysql.cj.jdbc.Driver";
+                String connectionUrl = "jdbc:mysql://localhost:3306/";
+                String dbName = "patients";
+                String userId = "root";
+                String password = "root";
+
+                try {
+                Class.forName(driverName);
+                } catch (ClassNotFoundException e) {
+                e.printStackTrace();
+                }
+
+                Connection connection = null;
+                Statement statement = null;
+                ResultSet resultSet = null;
                 try
                 {
-                        Class.forName("com.mysql.cj.jdbc.Driver");
-                        Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/patients", "root", "root");
-                        Statement st=conn.createStatement();
-                        String sql ="SELECT * FROM patients where id = "+id+" INTO OUTFILE 'C:/ProgramData/MySQL/MySQL Server 8.0/Uploads/order"+id+".txt' FIELDS TERMINATED BY '\n'";
-                        String sql ="SELECT '***Статистический талон***\n\nДата:', CURRENT_DATE(), "+
-                       "'\n\nФИО:', surname,  name,  second_name, "+
-                       "'\n\nПол:', gender,"+
-                       "'\n\nДата рождения:', birthdate,"+
-                       "'\n\nНомер полиса:', polis_num,"+
-                       "'\n\nНомер паспорта:', pasport_num,"+
-                       "'\n\nНомер телефона:', contact,"+
-                       "'\n\nПочта:', email,"+
-                       "'\n\nКабинеты:', routesheet"+
-                        "FROM patients where id = "+id+
-                        "INTO OUTFILE 'C:/ProgramData/MySQL/MySQL Server 8.0/Uploads/order"+id+".txt'";
-
-                        ResultSet resultSet = null;
-                        resultSet = st.executeQuery(sql);
+                        connection = DriverManager.getConnection(connectionUrl+dbName, userId, password);
+                statement=connection.createStatement();
+String sql ="SELECT 'Талон :','Имя', name, surname, birthdate FROM patients INTO OUTFILE 'C:/ProgramData/MySQL/MySQL Server 8.0/Uploads/order102.doc'";
+                        resultSet = statement.executeQuery(sql);
 
 
                 }
