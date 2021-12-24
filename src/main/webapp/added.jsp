@@ -32,7 +32,7 @@
 
 
         <title>Данные</title>
-
+        </head>
         <body style="margin-left:5%">
         <h1>Данные добавлены!</h1>
         <br><a  href="addingData.jsp">Добавить еще одного пациента</a>
@@ -64,12 +64,11 @@
             int apartment = Integer.parseInt(request.getParameter("apartment"));
             String contact = request.getParameter("contact");
             String email = request.getParameter("email");
-            String cabs = request.getParameter("routesheet");
-
+            String cabs = request.getParameter("cabs");
         try{
 
          Class.forName("com.mysql.cj.jdbc.Driver");
-           Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/patients", "root", "root");
+           Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/patients?useUnicode=true&characterEncoding=UTF-8", "root", "root");
            Statement st=con.createStatement();
            int i=st.executeUpdate("insert into patients.patients(surname, name, second_name, gender, birthdate, polis_num, pasport_num, country, city, district, street, house_num, building, apartment, contact, email, routesheet) VALUES(  '"+surName+"', '"+firstName+"', '"+lastName+"', '"+gender+"', '"+dateBirth+"','"+polisNum+"', '"+pasportNum+"', '"+country+"', '"+city+"', '"+district+"', '"+street+"', '"+house_num+"','"+building+"','"+apartment+"', '"+contact+"', '"+email+"', '"+cabs+"')");
 
@@ -82,7 +81,6 @@
 				return;
 
         }
-
 
         %>
 

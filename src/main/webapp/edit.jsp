@@ -57,7 +57,7 @@
         </tr>
         <tr>
         <td>Фамилия</td>
-        <td><input type="text" name="surName" value = "<%=resultSet.getString("surName") %>" /></td>
+        <td><input type="text" name="surName" value = "<%=resultSet.getString("surname") %>" /></td>
         </tr>
 
         <tr>
@@ -83,7 +83,7 @@
 
         <tr>
         <td>Номер полиса</td>
-        <td><input type="text" size="16" name="polisNum" value = "<%=resultSet.getString("polis_num") %>"/></td>
+        <td><input type="text" size="16" minlength="16" name="polisNum" value = "<%=resultSet.getString("polis_num") %>"/></td>
         </tr>
 
 

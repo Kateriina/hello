@@ -5,9 +5,8 @@
         <%@ page language="java" contentType="text/html; charset=UTF-8"
                  pageEncoding="UTF-8"%>
         <%@page import="java.sql.*,java.util.*"%>
-        <?xml version="1.0" encoding="UTF-8"?>
-        <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
-        <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fi">
+        <!DOCTYPE>
+        <html>
             <head>
             <meta charset="UTF-8" />
             <script src="filter.js" type="text/javascript"></script>
@@ -111,12 +110,13 @@
             </head>
             <body>
             <%
+
 String driverName = "com.mysql.cj.jdbc.Driver";
 String connectionUrl = "jdbc:mysql://localhost:3306/";
 String dbName = "patients";
 String userId = "root";
 String password = "root";
-
+request.setCharacterEncoding("utf-8");
 try {
 Class.forName(driverName);
 } catch (ClassNotFoundException e) {
@@ -159,7 +159,7 @@ ResultSet resultSet = null;
         </tr>
             <%
                 try{
-                connection = DriverManager.getConnection(connectionUrl+dbName, userId, password);
+                connection = DriverManager.getConnection(connectionUrl+dbName+"?useUnicode=true&characterEncoding=UTF-8", userId, password);
                 statement=connection.createStatement();
                 String sql ="SELECT * FROM patients";
 

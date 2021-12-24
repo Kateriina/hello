@@ -6,18 +6,36 @@
         <meta charset="UTF-8" />
         <link rel="stylesheet" href = "style.css">
         <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Montserrat:wght@100;400;600&family=Open+Sans:wght@700&display=swap" rel="stylesheet">
+    <style>
+    a{
+    color: #f0feed;
+    display: inline-block;
+    vertical-align: top;
+    margin: 0 10px;
+    position: relative;
+    text-decoration: none;
+    transition: color .2s linear;
+    font-size: 300%;
+    font-family: 'Montserrat', sans-serif;
+    }
 
-        <body>
-            <title>Удаление</title>
+    a:hover{
+    color: black;
+    }
+    h1{
+    font-size:300%;
+    margin-left:10px;
+    }
+    </style>
 
-            <h1 align="center">Данные удалены</h1>
 
-            <form action="view.jsp" method="POST">
-                <input type="submit" value="Посмотреть" />
-            </form>
-            <form action="index.jsp" method="POST">
-            <input type="submit" value="Главное меню" />
-            </form>
+    <title>Удалены</title>
+    </head>
+    <body style="margin-left:5%">
+    <h1>Данные удалены!</h1>
+    <br><a  href="addingData.jsp">Добавить пациента</a>
+    <br><a  href="view.jsp">Просмотр данных</a>
+    <br><a  href="index.jsp">Главное меню</a>
             <%
                 String id = request.getParameter("id");
 
