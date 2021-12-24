@@ -188,6 +188,7 @@ ResultSet resultSet = null;
 
         <td><a href="edit.jsp?id=<%=resultSet.getInt("id") %>">Изменить</a></td>
         <td><a href="jspDelete.jsp?id=<%=resultSet.getInt("id") %>">Удалить</a></td>
+        <td><a href="downl.jsp?id=<%=resultSet.getInt("id") %>">Талон</a></td>
         </tr>
 
             <%
