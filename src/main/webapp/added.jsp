@@ -41,7 +41,7 @@
 
 
             <%
-
+            request.setCharacterEncoding("UTF-8");
             String surName = request.getParameter("surName");
             String firstName = request.getParameter("firstName");
             String lastName = request.getParameter("lastName");

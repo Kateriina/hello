@@ -32,7 +32,6 @@
           <body style="margin-left:5%">
         <h1>Статистический талон готов!</h1>
         <%String addr = "C:/ProgramData/MySQL/MySQL Server 8.0/Uploads/order102.docx";%>
-       <a  href = "C:/ProgramData/MySQL/MySQL Server 8.0/Uploads/order102.doc">Скачать</a>
           <br><a  href="index.jsp">Главное меню</a>
 
             <%
@@ -55,9 +54,10 @@
                 ResultSet resultSet = null;
                 try
                 {
-                        connection = DriverManager.getConnection(connectionUrl+dbName, userId, password);
+                        connection = DriverManager.getConnection(connectionUrl+dbName+"?useUnicode=true&characterEncoding=UTF-8", userId, password);
                 statement=connection.createStatement();
-String sql ="SELECT 'Талон :','Имя', name, surname, birthdate FROM patients INTO OUTFILE 'C:/ProgramData/MySQL/MySQL Server 8.0/Uploads/order102.doc'";
+                        String sql ="SELECT '***Статистический талон***\n\nФИО:', surname,  name,  second_name, '\n\nПол:', gender,'\n\nДата рождения:', birthdate,'\n\nКабинеты:', routesheet FROM patients where id = "+id+" INTO OUTFILE 'C:/ProgramData/MySQL/MySQL Server 8.0/Uploads/order"+id+".txt'";
+
                         resultSet = statement.executeQuery(sql);
 
 

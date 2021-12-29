@@ -49,7 +49,7 @@
         <div class="regform">
         <h1>Изменение данных</h1>
 
-        <form action="edited.jsp?id=<%=idd%>" method="POST">
+        <form action="edited.jsp?id=<%=idd%>" method="POST" accept-charset="UTF-8">
         <table style="with: 80%">
         <tr>
         <td class="info">Данные

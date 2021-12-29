@@ -34,7 +34,7 @@
                 <title>Ошибка</title><div class="regform">
                 <h1 align="left">Ошибка при заполнении данных!</h1>
 
-                <a href="index.jsp">На главную</a>
+                <a href="index.jsp">На главную страницу</a>
                 <a href="view.jsp">Вернуться к просмотру данных</a>
             </div>
             </body>
