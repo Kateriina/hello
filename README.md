@@ -1,3 +1,3 @@
 # hello
 my project
-![Screenshots](https://github.com/Kateriina/hello/reg1.png)
+![Main page](https://github.com/Kateriina/hello/blob/master/reg1.png)
